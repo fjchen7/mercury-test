@@ -23,4 +23,5 @@ jobs:
           shopt -s globstar  # enable globstart (**)
       - name: Run integration test
         run: |
-          hurl --variable mercury_testnet_host="${{ secrets.MERCURY_TESTNET_HOST }}" --test ./integration-test/**/*hurl --summary
+          cd integration-test
+          ./test.sh
